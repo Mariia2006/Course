@@ -4,7 +4,15 @@ namespace ConsoleApp38
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine().ToLower();
+            Console.WriteLine("Input line in English");
+            try
+            {
+                string input = Console.ReadLine().ToLower();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             string withoutSpaces = new string(input.Where(i => !char.IsWhiteSpace(i)).ToArray());
 
             Dictionary<char, int> elem_count = new Dictionary<char, int>();
