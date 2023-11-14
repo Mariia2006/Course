@@ -7,7 +7,7 @@ namespace ConsoleApp38
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int[] numbers = new int[10];
+            int[] numbers = new int[100];
             int rem = int.MinValue;
             int sum = 0;
             int index = 0;
@@ -16,7 +16,7 @@ namespace ConsoleApp38
 
             for (int i = 0; i <= numbers.Length - 1; i++)
             {
-                numbers[i] = rand.Next(1, 10);
+                numbers[i] = rand.Next(100, 900);
                 Console.Write(numbers[i] + " ");
             }
 
